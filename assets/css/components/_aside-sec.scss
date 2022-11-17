@@ -18,26 +18,22 @@
             margin:1.3rem auto;
             width: 30px;
             height: 30px;
-           
             &:hover{
-                
-                    svg{
-                        transition: 150ms ease-in-out;
-                        stroke: rgb(225, 225, 225);
-                        stroke-width: 2.5px;
-                        fill : black ;
-                        path{
-                            fill: black
-                        }
+                svg{
+                    transition: 150ms ease-in-out;
+                    stroke: rgb(225, 225, 225);
+                    stroke-width: 2.5px;
+                    fill : black ;
+                    path{
+                        fill: black
                     }
+                }
             }
             svg{
                 width: 100%;
                 height: 100%;
-            }
-            
+            }   
         }
-        
     }
     @media (min-width: $tablet) {
         .social-media{

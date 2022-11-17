@@ -3,7 +3,7 @@
     height: 74vh;
     margin-top: 3rem;
     // background-color: rebeccapurple;
-    font-size: 7vw;
+    font-size: 11vw ;
     direction: rtl;
     &_title{
         width: 100%;
@@ -19,5 +19,11 @@
         .title__oringe{
             color : var(--main-orange)
         }
+    }
+}
+
+@media (min-width: $tablet) {
+    .header{
+        font-size: 7vw;
     }
 }
