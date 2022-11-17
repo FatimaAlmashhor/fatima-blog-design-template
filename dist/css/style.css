@@ -147,14 +147,21 @@ Files inside this folder can contain specific element styles and layout.
 .main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 8fr;
-      grid-template-columns: 1fr 8fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 .main .resent-blogs {
   background-color: rebeccapurple;
   width: 100%;
   margin: 0px;
+}
+
+@media (min-width: 660px) {
+  .main {
+    -ms-grid-columns: 1fr 8fr;
+        grid-template-columns: 1fr 8fr;
+  }
 }
 
 footer {

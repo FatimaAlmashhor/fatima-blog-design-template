@@ -35,7 +35,7 @@
 
 .main{
     display: grid;
-    grid-template-columns: 1fr 8fr;
+    grid-template-columns: 1fr ;
 
     .resent-blogs{
         background-color: rebeccapurple;
@@ -43,4 +43,8 @@
         margin: 0px;
     }
 }
-
+@media (min-width: $tablet) {
+    .main{
+        grid-template-columns: 1fr 8fr;
+    }
+}
