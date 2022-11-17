@@ -1,0 +1,119 @@
+// nav_toggle{
+//     /* Vector */
+
+// position: absolute;
+// left: 3.28%;
+// right: 93.53%;
+// top: 41.84%;
+// bottom: 37.76%;
+
+// background: #FFFFFF;
+
+// }
+.nav{ 
+    position: static;
+    .nav_logo{
+        width: 100%;
+        display: flex ;
+        align-items: center;
+        flex-direction: column;
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        // background-color: rebeccapurple;
+        &_title{
+            text-align: center;
+            font-family: 'inter' , sans-serif ;
+        }
+    }
+    
+    .nav_toggle {
+        width: 100%;
+        display: flex ;
+        align-items: center;
+        // background-color: aqua;
+        
+        &_icon{
+            width: 20px;
+            height: 20px ;
+            display: flex ;
+            justify-content: center;
+            align-items: center;
+            svg{
+                width:  inherit;
+                height: inherit;
+            }
+        }
+        @media  (min-width : $tablet) {
+            &_icon{
+                width: 70px;
+                height: 70px ;
+            }
+        }
+        
+    }
+    .nav_search{
+        width:100%;
+        display: flex ;
+        flex-direction: column;
+        align-items: center;
+        justify-items: flex-end; 
+        flex-direction: row-reverse;
+        .hidden {
+            display: none;
+        }
+
+        &_continer{
+            // position: absolute;
+            width: 100% ;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            justify-content: center;
+            align-items: center;
+            // background-color: rebeccapurple;
+            .nav_search_btn{
+                background-color: var(--main-white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                // height: auto;
+                img{
+                    width: 50%;
+                }
+            }
+            .nav_search_input{
+                position: relative  ;
+                width: 100%;
+                
+                input{
+                    padding: 0px;
+                    position: absolute;
+                    width: 300%;
+                    height: 100%;
+                    right: 0px;
+                    background-color: var(--main-gray);
+                }
+              
+                .hidden_input{
+                    width: 0px;
+                }
+            }
+            @media (min-width:$tablet) {
+                // &_continer{
+                //     // position: relative;
+                // }
+                .nav_search_btn{
+                    width: 70px;
+                    height: 70px;
+                }
+                input{
+                    position: relative;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

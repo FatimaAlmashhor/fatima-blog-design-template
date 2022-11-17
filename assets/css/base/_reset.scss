@@ -1,0 +1,93 @@
+
+
+*{
+    margin: 0px ; 
+    padding : 0px ; 
+    box-sizing: border-box;
+}
+:root{
+    --main-black : #1E1E1E ; 
+    --main-orange : #F2A448 ; 
+    --main-gray : #CBCBCB ;
+    --dark-gray : #a8a7a7 ;
+    --main-white: white ;
+    --gray-text : var(--main-gray) ;
+    --blorder : 65px ;
+    --xl : 2rem;
+    --md : 1rem; 
+    --sm : 0.4rem ;
+    --top_nav: 90px;
+    // --top_nav-mobile: 90px;
+
+}
+
+body{
+    max-width: 100%;
+    font-family: $arabic-font;
+    overflow-x: none ;
+    background-color: var(--main-black);
+    color: var(--main-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container{
+    // border: 1px solid white ;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+input{
+    border: none;
+    padding: 5px;
+    inset: none;
+}
+
+input:active{
+    border: none;
+}
+
+ul{
+    list-style: none;
+    margin : 0px ;
+    padding :0px ;
+}
+
+._3xl{
+    font-size: 2em ;
+}
+._2xl{
+    font-size : 1.4em;
+}
+
+._xl{
+    font-size : 13px;
+}
+._md{
+    font-size : .7em;
+}
+._sm{
+    font-size : .4em;
+}
+
+@media screen and (min-width : $tablet) {
+    ._3xl{
+        font-size: 5em ;
+    }
+    ._2xl{
+        font-size : 3em;
+    }
+    
+    ._xl{
+        font-size : 32px;
+    }
+    ._md{
+        font-size : 1.3em;
+    }
+    ._sm{
+        font-size : .7em;
+    }
+    
+}
