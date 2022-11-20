@@ -154,14 +154,19 @@ Files inside this folder can contain specific element styles and layout.
 .main .resent-blogs {
   width: 100%;
   min-height: 60vh;
-  margin: 6rem auto;
-  padding: 3em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  margin: 20rem auto;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .resent-blogs .blog {
+  margin: 1.7rem auto;
 }
 
 @media (min-width: 970px) {
@@ -171,6 +176,7 @@ Files inside this folder can contain specific element styles and layout.
     -ms-grid-rows: 2fr 1fr;
         grid-template-rows: 2fr 1fr;
     background-color: red;
+    padding: 6%;
   }
   .main .resent-blogs_head {
     -ms-grid-column: 1;
@@ -444,5 +450,9 @@ footer.dark {
   .header {
     font-size: 7vw;
   }
+}
+
+.animat_circle {
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
