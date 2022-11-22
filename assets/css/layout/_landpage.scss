@@ -34,18 +34,19 @@
 }
 
 .main{
+    --arrow-with:80px; 
     display: grid;
     grid-template-columns: 1fr ;
 
     .resent-blogs{
-        width: 100%;
-        min-height: 60vh ;
+        width: 85%;
+        min-height: 90vh ;
         margin: 20rem auto;
-        padding: 2% ;
+        // padding: 2% ;
         display: flex;
         flex-direction: column;
         .blog{
-            margin:1.7rem auto;
+            // margin:1.7rem auto;
             // padding: 1.7rem;
         }
         
@@ -53,13 +54,15 @@
 
     @media (min-width: $tablet) {
         .resent-blogs{
+            width: 100%;
+            display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 2fr 1fr;
-            background-color: red;
-             // margin: 20rem auto;
+            //  margin:1.3rem 20px;
             padding: 6% ;
             &_head{
                 grid-column : 1/3;
+                height: 100%;
             }
             &_other{
                 grid-column: 1/3 ;
@@ -67,12 +70,17 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
+            
+        }
+        .blog{
+            margin: 0px;
+            height: 100%;
+            // padding: 1.7rem;
         }
     }
 }
 @media (min-width: $tablet) {
     .main{
         grid-template-columns: 1fr 8fr;
-       
     }
 }
