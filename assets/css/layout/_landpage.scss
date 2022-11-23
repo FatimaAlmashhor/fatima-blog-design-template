@@ -2,7 +2,7 @@
 // landpage layout 
 .landpage-layout{
     width: 100%;
-    direction: rtl;
+    direction: ltr;
 }
 // navbar layout
 .nav{       
@@ -34,11 +34,13 @@
 }
 
 .main{
+    
     --arrow-with:80px; 
     display: grid;
     grid-template-columns: 1fr ;
 
     .resent-blogs{
+        direction: rtl;
         width: 85%;
         min-height: 90vh ;
         margin: 20rem auto;
@@ -57,7 +59,8 @@
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 2fr 1fr;
+            grid-template-rows: 80vh 40vh;
+            overflow: hidden;
             //  margin:1.3rem 20px;
             padding: 6% ;
             &_head{
