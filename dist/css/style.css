@@ -152,11 +152,19 @@ Files inside this folder can contain specific element styles and layout.
       grid-template-columns: 1fr;
 }
 
-.main .resent-blogs {
+.main .title {
+  font-size: 4vw;
+  margin: 3.6rem 0px;
+}
+
+.main .resent-contaner {
   direction: rtl;
   width: 85%;
   min-height: 90vh;
-  margin: 20rem auto;
+  margin: 16vh auto;
+}
+
+.main .resent-contaner .resent-blogs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
