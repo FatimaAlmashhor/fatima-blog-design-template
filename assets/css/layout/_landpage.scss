@@ -51,9 +51,11 @@
         // padding: 2% ;
         display: flex;
         flex-direction: column;
-        .blog{
-            // margin:1.7rem auto;
-            // padding: 1.7rem;
+        &_other{
+            display: grid ;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 12px;
+            margin-top: 2em ;
         }
         
     }
@@ -63,19 +65,17 @@
     @media (min-width: $tablet) {
         .resent-blogs{
             width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 80vh 40vh;
+            display: flex;
+            flex-direction: column;
+            
             overflow: hidden;
             //  margin:1.3rem 20px;
             padding: 6% ;
             &_head{
-                grid-column : 1/3;
-                height: 100%;
+                flex: 2rem;
             }
             &_other{
-                grid-column: 1/3 ;
-                grid-row: 2/3;
+                flex: 1fr;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }

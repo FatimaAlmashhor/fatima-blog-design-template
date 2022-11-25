@@ -174,31 +174,38 @@ Files inside this folder can contain specific element styles and layout.
           flex-direction: column;
 }
 
+.main .resent-contaner .resent-blogs_other {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  margin-top: 2em;
+}
+
 @media (min-width: 970px) {
   .main .resent-blogs {
     width: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 80vh 40vh;
-        grid-template-rows: 80vh 40vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow: hidden;
     padding: 6%;
   }
   .main .resent-blogs_head {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1/3;
-    height: 100%;
+    -webkit-box-flex: 2rem;
+        -ms-flex: 2rem;
+            flex: 2rem;
   }
   .main .resent-blogs_other {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1/3;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
+    -webkit-box-flex: 1fr;
+        -ms-flex: 1fr;
+            flex: 1fr;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -487,25 +494,25 @@ footer.dark {
       grid-template-rows: 2fr 1fr;
 }
 
-.blog_container .blog_view {
+.big-blog .blog_view {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.blog_container .blog_view .blog_image {
+.big-blog .blog_view .blog_image {
   width: 100%;
   height: 100%;
 }
 
-.blog_container .blog_view .blog_image img {
+.big-blog .blog_view .blog_image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.blog_container .blog_view .blog_link {
+.big-blog .blog_view .blog_link {
   position: absolute;
   left: -50px;
   top: 50%;
@@ -527,7 +534,7 @@ footer.dark {
   background-color: aliceblue;
 }
 
-.blog-text {
+.big-blog .blog-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,17 +551,17 @@ footer.dark {
   margin-top: 30px;
 }
 
-.blog-text_header {
+.big-blog .blog-text_header {
   border-bottom: 1px solid var(--main-gray);
   width: 100%;
   padding-bottom: 18px;
 }
 
-.blog-text_header h2 {
+.big-blog .blog-text_header h2 {
   padding-right: 0px;
 }
 
-.blog-text_des {
+.big-blog .blog-text_des {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,7 +576,7 @@ footer.dark {
   margin-top: 20px;
 }
 
-.blog-text_des h3 {
+.big-blog .blog-text_des h3 {
   padding-right: 0px;
 }
 
