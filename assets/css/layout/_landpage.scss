@@ -51,11 +51,19 @@
         // padding: 2% ;
         display: flex;
         flex-direction: column;
+        &_head{
+            height: 60vh;
+            // background: yellow;
+        }
         &_other{
+
+            max-height: 60vh;
+            background-color: red;
+            overflow: hidden;
             display: grid ;
             grid-template-columns: 1fr 1fr;
             column-gap: 12px;
-            margin-top: 2em ;
+            margin-top: 5em ;
         }
         
     }
