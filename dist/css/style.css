@@ -116,16 +116,16 @@ Files inside this folder can contain specific element styles and layout.
   direction: ltr;
 }
 
-.nav {
+.landpage-layout .nav {
   width: 100%;
   direction: ltr;
 }
 
-.nav_container {
+.landpage-layout .nav_container {
   width: 100%;
 }
 
-.nav_container_layout {
+.landpage-layout .nav_container_layout {
   padding: 1.6rem 0.6rem 2.6rem 0.6rem;
   display: -ms-grid;
   display: grid;
@@ -137,14 +137,14 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 @media (min-width: 970px) {
-  .nav_container_layout {
+  .landpage-layout .nav_container_layout {
     --top_nav: 160px ;
     padding: 2.6rem 2.6rem 3.6rem 2.6rem;
     height: var(--top_nav);
   }
 }
 
-.main {
+.landpage-layout .main {
   --arrow-with:80px;
   display: -ms-grid;
   display: grid;
@@ -152,19 +152,19 @@ Files inside this folder can contain specific element styles and layout.
       grid-template-columns: 1fr;
 }
 
-.main .title {
+.landpage-layout .main .title {
   font-size: 4vw;
   margin: 3.6rem 0px;
 }
 
-.main .resent-contaner {
+.landpage-layout .main .resent-contaner {
   direction: rtl;
   width: 85%;
   min-height: 90vh;
   margin: 16vh auto;
 }
 
-.main .resent-contaner .resent-blogs {
+.landpage-layout .main .resent-contaner .resent-blogs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,25 +174,25 @@ Files inside this folder can contain specific element styles and layout.
           flex-direction: column;
 }
 
-.main .resent-contaner .resent-blogs_head {
-  height: 60vh;
+.landpage-layout .main .resent-contaner .resent-blogs_head {
+  min-height: 60vh;
 }
 
-.main .resent-contaner .resent-blogs_other {
-  max-height: 60vh;
+.landpage-layout .main .resent-contaner .resent-blogs_other {
+  min-height: 60vh;
   background-color: red;
-  overflow: hidden;
   display: -ms-grid;
   display: grid;
+  -webkit-column-gap: 112px;
+          column-gap: 112px;
+  row-gap: 20px;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 12px;
-          column-gap: 12px;
   margin-top: 5em;
 }
 
 @media (min-width: 970px) {
-  .main .resent-blogs {
+  .landpage-layout .main .resent-blogs {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -204,28 +204,26 @@ Files inside this folder can contain specific element styles and layout.
     overflow: hidden;
     padding: 6%;
   }
-  .main .resent-blogs_head {
+  .landpage-layout .main .resent-blogs_head {
     -webkit-box-flex: 2rem;
         -ms-flex: 2rem;
             flex: 2rem;
   }
-  .main .resent-blogs_other {
-    -webkit-box-flex: 1fr;
-        -ms-flex: 1fr;
-            flex: 1fr;
+  .landpage-layout .main .resent-blogs_other {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    background-color: pink;
   }
-  .main .blog {
+  .landpage-layout .main .blog {
     margin: 0px;
     height: 100%;
   }
 }
 
 @media (min-width: 970px) {
-  .main {
+  .landpage-layout .main {
     -ms-grid-columns: 1fr 8fr;
         grid-template-columns: 1fr 8fr;
   }
@@ -588,17 +586,19 @@ footer.dark {
 }
 
 .normal-blog .small_blog_contaner {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .normal-blog .small_blog_contaner .blog_view {
   width: 100%;
-  height: 100%;
+  height: 40%;
   position: relative;
 }
 

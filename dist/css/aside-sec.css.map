@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,KADC,CACD,aAAa,CAAA;EACT,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,aAAa;CAClC",
-    "sources": [
-        "../../assets/css/components/aside-sec.scss"
-    ],
-    "names": [],
-    "file": "aside-sec.css"
-}
