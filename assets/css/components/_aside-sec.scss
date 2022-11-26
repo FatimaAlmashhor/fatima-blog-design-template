@@ -1,5 +1,7 @@
-.main{
+
     .social-media{
+        position: sticky;
+        top: 150px;
         --total : calc( var(--top_nav) + 3rem) ;
         padding: 2rem;
         width: 100%;
@@ -40,4 +42,3 @@
             display: flex;
         }    
     }
-}
