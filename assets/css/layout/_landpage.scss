@@ -60,10 +60,10 @@
                 }
                 &_other{
                     min-height: 60vh;
-                    background-color: red;
+                    // background-color: red;
                     // overflow: hidden;
                     display: grid ;
-                    column-gap: 112px;
+                    column-gap: 90px;
                     row-gap: 20px;
                     grid-template-columns: 1fr 1fr ;
                     margin-top: 5em ;
@@ -85,7 +85,7 @@
                     &_other{
                         display: grid;
                         grid-template-columns: 1fr;
-                        background-color: pink;
+                        // background-color: pink;
                     }
                     
                 }
