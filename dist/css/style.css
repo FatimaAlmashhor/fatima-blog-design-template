@@ -150,6 +150,7 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 .landpage-layout .main {
+  position: relative;
   --arrow-with:80px;
   display: -ms-grid;
   display: grid;
@@ -162,14 +163,14 @@ Files inside this folder can contain specific element styles and layout.
   margin: 3.6rem 0px;
 }
 
-.landpage-layout .main .resent-contaner {
+.landpage-layout .main .contetn_sec .resent-contaner {
   direction: rtl;
   width: 85%;
   min-height: 90vh;
   margin: 16vh auto;
 }
 
-.landpage-layout .main .resent-contaner .resent-blogs {
+.landpage-layout .main .contetn_sec .resent-contaner .resent-blogs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,12 +180,12 @@ Files inside this folder can contain specific element styles and layout.
           flex-direction: column;
 }
 
-.landpage-layout .main .resent-contaner .resent-blogs_head {
+.landpage-layout .main .contetn_sec .resent-contaner .resent-blogs_head {
   min-height: 60vh;
 }
 
-.landpage-layout .main .resent-contaner .resent-blogs_other {
-  min-height: 60vh;
+.landpage-layout .main .contetn_sec .resent-contaner .resent-blogs_other {
+  height: 50vh;
   display: -ms-grid;
   display: grid;
   -webkit-column-gap: 90px;
@@ -196,7 +197,7 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 @media (min-width: 970px) {
-  .landpage-layout .main .resent-blogs {
+  .landpage-layout .main .contetn_sec .resent-blogs {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -208,21 +209,140 @@ Files inside this folder can contain specific element styles and layout.
     overflow: hidden;
     padding: 6%;
   }
-  .landpage-layout .main .resent-blogs_head {
+  .landpage-layout .main .contetn_sec .resent-blogs_head {
     -webkit-box-flex: 2rem;
         -ms-flex: 2rem;
             flex: 2rem;
   }
-  .landpage-layout .main .resent-blogs_other {
+  .landpage-layout .main .contetn_sec .resent-blogs_other {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .landpage-layout .main .blog {
+  .landpage-layout .main .contetn_sec .blog {
     margin: 0px;
     height: 100%;
   }
+}
+
+.landpage-layout .main .lang_sec {
+  position: relative;
+  width: 100%;
+  height: 24vh;
+}
+
+.landpage-layout .main .lang_sec .lang-contanier {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--main-gray);
+}
+
+.landpage-layout .main .lang_sec .lang-contanier ul {
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 100px;
+          column-gap: 100px;
+  color: var(--main-black);
+  font-size: 3.5rem;
+}
+
+.landpage-layout .main .lang_sec .lang-contanier ul a {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.landpage-layout .main .lang_sec .lang-contanier ul a:hover {
+  background-color: gray;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 3px 30px;
+  border-radius: 20pc;
+  color: white;
+}
+
+.landpage-layout .main .more-blogs_sec {
+  margin-top: 9rem;
+}
+
+.landpage-layout .main .see-more_sec {
+  position: relative;
+  width: 100%;
+  top: -60px;
+}
+
+.landpage-layout .main .see-more_sec .see-more_link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landpage-layout .main .see-more_sec .see-more_container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--main-gray);
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.landpage-layout .main .see-more_sec .see-more_container svg {
+  position: absolute;
+  fill: gray;
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  top: 80%;
+}
+
+.landpage-layout .main .see-more_sec .see-more_container:hover svg {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
 }
 
 @media (min-width: 970px) {
