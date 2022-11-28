@@ -618,6 +618,7 @@ footer.dark {
   z-index: 100;
   top: 50%;
   left: 50%;
+  z-index: 3;
   -webkit-transform: translate(-30%, -80%);
           transform: translate(-30%, -80%);
   -webkit-transform-style: preserve-3d;
@@ -639,6 +640,7 @@ footer.dark {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 90;
   background: transparent;
   font-size: 5vw;
   /* padding: 5px 12px;
@@ -675,23 +677,23 @@ footer.dark {
 
 @-webkit-keyframes upDown {
   from {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: perspective(100px) translateY(-10px);
+            transform: perspective(100px) translateY(-10px);
   }
   to {
-    -webkit-transform: translateY(60px);
-            transform: translateY(60px);
+    -webkit-transform: perspective(100px) translateY(60px);
+            transform: perspective(100px) translateY(60px);
   }
 }
 
 @keyframes upDown {
   from {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: perspective(100px) translateY(-10px);
+            transform: perspective(100px) translateY(-10px);
   }
   to {
-    -webkit-transform: translateY(60px);
-            transform: translateY(60px);
+    -webkit-transform: perspective(100px) translateY(60px);
+            transform: perspective(100px) translateY(60px);
   }
 }
 

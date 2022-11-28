@@ -9,6 +9,7 @@
         z-index: 100;
         top: 50%;
         left: 50%;
+        z-index: 3;
         transform: translate(-30%, -80%);
         transform-style: preserve-3d;
         animation: upDown 3s linear infinite alternate;
@@ -23,6 +24,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 90;
         background: transparent;
         font-size: 5vw;
         /* padding: 5px 12px;
@@ -46,9 +48,10 @@
 
 @keyframes upDown{
     from{
-        transform: translateY(-10px);
+        transform:perspective(100px) translateY(-10px);
+
     }
     to{
-        transform: translateY(60px);
+        transform:perspective(100px) translateY(60px);
     }
 }
