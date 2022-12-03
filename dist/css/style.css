@@ -317,9 +317,10 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 .landpage-layout .main .see-more_sec .see-more_container {
+  --r: 100px;
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: var(--r);
+  height: var(--r);
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,9 +335,22 @@ Files inside this folder can contain specific element styles and layout.
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--main-gray);
+  background-color: transparent;
   border-radius: 50%;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.landpage-layout .main .see-more_sec .see-more_container::after {
+  content: '';
+  position: absolute;
+  width: var(--r);
+  height: var(--r);
+  background-color: var(--main-gray);
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .landpage-layout .main .see-more_sec .see-more_container svg {
@@ -345,13 +359,23 @@ Files inside this folder can contain specific element styles and layout.
   -webkit-transform: rotate(130deg);
           transform: rotate(130deg);
   top: 80%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.landpage-layout .main .see-more_sec .see-more_container:hover {
+  background-color: transparent;
+  color: var(--main-gray);
+}
+
+.landpage-layout .main .see-more_sec .see-more_container:hover::after {
+  width: 0px;
+  height: 0px;
 }
 
 .landpage-layout .main .see-more_sec .see-more_container:hover svg {
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  -webkit-transform: rotate(130deg);
-          transform: rotate(130deg);
+  -webkit-transform: translateY(20px) rotate(130deg);
+          transform: translateY(20px) rotate(130deg);
 }
 
 @media (min-width: 970px) {
