@@ -59,6 +59,7 @@
         align-items: center;
         justify-items: flex-end; 
         flex-direction: row-reverse;
+        
         .hidden {
             display: none;
         }
@@ -73,6 +74,7 @@
             align-items: center;
             // background-color: rebeccapurple;
             .nav_search_btn{
+                cursor: pointer;
                 background-color: var(--main-white);
                 display: flex;
                 align-items: center;

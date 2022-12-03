@@ -1,4 +1,43 @@
-// const circle = document.querySelector('.animat_circle');
+
+
+// https://www.superhi.com/video/smooth-movements-with-javascript
+
+const ball = document.querySelector("#cursor");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let ballX = 0;
+let ballY = 0;
+
+let speed = 0.2;
+
+
+function animate() {
+
+    let distX = mouseX - ballX;
+    let distY = mouseY - ballY;
+    distX = distX - ball.clientWidth / 2;
+    distY = distY - ball.clientHeight / 2;
+
+    ballX = ballX + (distX * speed);
+    ballY = ballY + (distY * speed);
+
+
+    // ballX = ballX - ballW;
+    // ballY = ballY - 10;
+    ball.style.left = ballX + "px";
+    ball.style.top = ballY + "px";
+
+    requestAnimationFrame(animate);
+}
+animate();
+
+document.addEventListener("mousemove", function (event) {
+    mouseX = event.pageX;
+    mouseY = event.pageY;
+})
+
 // this is for circle animation
 const circleLetters = () => {
     const circle = document.querySelector('.animat_circle');

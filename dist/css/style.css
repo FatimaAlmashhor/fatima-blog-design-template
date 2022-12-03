@@ -111,12 +111,29 @@ ul {
 This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
 */
-.landpage-layout {
+.main_container {
+  position: relative;
+}
+
+.main_container #cursor {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 1px solid var(--main-white);
+  border-radius: 50%;
+  z-index: 100000 !important;
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  top: 0px;
+}
+
+.main_container .landpage-layout {
   width: 100%;
   direction: ltr;
 }
 
-.landpage-layout .nav {
+.main_container .landpage-layout .nav {
   width: 100%;
   direction: ltr;
   position: -webkit-sticky;
@@ -126,11 +143,11 @@ Files inside this folder can contain specific element styles and layout.
   background-color: var(--main-black);
 }
 
-.landpage-layout .nav_container {
+.main_container .landpage-layout .nav_container {
   width: 100%;
 }
 
-.landpage-layout .nav_container_layout {
+.main_container .landpage-layout .nav_container_layout {
   padding: 1.6rem 0.6rem 2.6rem 0.6rem;
   display: -ms-grid;
   display: grid;
@@ -142,14 +159,14 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 @media (min-width: 970px) {
-  .landpage-layout .nav_container_layout {
+  .main_container .landpage-layout .nav_container_layout {
     --top_nav: 160px ;
     padding: 2.6rem 2.6rem 3.6rem 2.6rem;
     height: var(--top_nav);
   }
 }
 
-.landpage-layout .main {
+.main_container .landpage-layout .main {
   position: relative;
   --arrow-with:80px;
   display: -ms-grid;
@@ -158,19 +175,19 @@ Files inside this folder can contain specific element styles and layout.
       grid-template-columns: 1fr;
 }
 
-.landpage-layout .main .title {
+.main_container .landpage-layout .main .title {
   font-size: 4vw;
   margin: 3.6rem 0px;
 }
 
-.landpage-layout .main .contetn_sec .resent-contaner {
+.main_container .landpage-layout .main .contetn_sec .resent-contaner {
   direction: rtl;
   width: 85%;
   min-height: 90vh;
   margin: 16vh auto;
 }
 
-.landpage-layout .main .contetn_sec .resent-contaner .resent-blogs {
+.main_container .landpage-layout .main .contetn_sec .resent-contaner .resent-blogs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,11 +197,11 @@ Files inside this folder can contain specific element styles and layout.
           flex-direction: column;
 }
 
-.landpage-layout .main .contetn_sec .resent-contaner .resent-blogs_head {
+.main_container .landpage-layout .main .contetn_sec .resent-contaner .resent-blogs_head {
   min-height: 60vh;
 }
 
-.landpage-layout .main .contetn_sec .resent-contaner .resent-blogs_other {
+.main_container .landpage-layout .main .contetn_sec .resent-contaner .resent-blogs_other {
   height: 50vh;
   display: -ms-grid;
   display: grid;
@@ -197,7 +214,7 @@ Files inside this folder can contain specific element styles and layout.
 }
 
 @media (min-width: 970px) {
-  .landpage-layout .main .contetn_sec .resent-blogs {
+  .main_container .landpage-layout .main .contetn_sec .resent-blogs {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -209,31 +226,33 @@ Files inside this folder can contain specific element styles and layout.
     overflow: hidden;
     padding: 6%;
   }
-  .landpage-layout .main .contetn_sec .resent-blogs_head {
+  .main_container .landpage-layout .main .contetn_sec .resent-blogs_head {
     -webkit-box-flex: 2rem;
         -ms-flex: 2rem;
             flex: 2rem;
   }
-  .landpage-layout .main .contetn_sec .resent-blogs_other {
+  .main_container .landpage-layout .main .contetn_sec .resent-blogs_other {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .landpage-layout .main .contetn_sec .blog {
+  .main_container .landpage-layout .main .contetn_sec .blog {
     margin: 0px;
     height: 100%;
   }
 }
 
-.landpage-layout .main .lang_sec {
-  --mask: radial-gradient(var(--a)  circle at var(--x, 70%) var(--y, 50%), rgb(179, 172, 172) 25%, transparent 0);
+.main_container .landpage-layout .main .lang_sec {
+  cursor: none;
+  --a:0px;
+  --mask: radial-gradient(var(--a)  circle at var(--x, 50%) var(--y, 50%), rgb(179, 172, 172) 25%, transparent 0);
   position: relative;
   width: 100%;
   height: 24vh;
 }
 
-.landpage-layout .main .lang_sec .lang-contanier {
+.main_container .landpage-layout .main .lang_sec .lang-contanier {
   position: absolute;
   width: 100vw;
   height: 100%;
@@ -252,7 +271,7 @@ Files inside this folder can contain specific element styles and layout.
   border-bottom: 1px solid var(--main-white);
 }
 
-.landpage-layout .main .lang_sec .lang-contanier ul {
+.main_container .landpage-layout .main .lang_sec .lang-contanier ul {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
@@ -270,13 +289,12 @@ Files inside this folder can contain specific element styles and layout.
   font-size: 3.5rem;
 }
 
-.landpage-layout .main .lang_sec .lang-contanier ul a {
-  cursor: pointer;
+.main_container .landpage-layout .main .lang_sec .lang-contanier ul a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.landpage-layout .main .lang_sec .secondary {
+.main_container .landpage-layout .main .lang_sec .secondary {
   position: absolute;
   top: 0;
   left: 0;
@@ -285,25 +303,27 @@ Files inside this folder can contain specific element styles and layout.
   background: var(--main-gray);
   -webkit-mask-image: var(--mask);
   mask-image: var(--mask);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.landpage-layout .main .lang_sec .secondary ul {
+.main_container .landpage-layout .main .lang_sec .secondary ul {
   color: var(--main-black);
   -webkit-text-stroke: 0px;
   text-stroke: 0px;
 }
 
-.landpage-layout .main .more-blogs_sec {
+.main_container .landpage-layout .main .more-blogs_sec {
   margin-top: 9rem;
 }
 
-.landpage-layout .main .see-more_sec {
+.main_container .landpage-layout .main .see-more_sec {
   position: relative;
   width: 100%;
   top: -60px;
 }
 
-.landpage-layout .main .see-more_sec .see-more_link {
+.main_container .landpage-layout .main .see-more_sec .see-more_link {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -316,7 +336,7 @@ Files inside this folder can contain specific element styles and layout.
           align-items: center;
 }
 
-.landpage-layout .main .see-more_sec .see-more_container {
+.main_container .landpage-layout .main .see-more_sec .see-more_container {
   --r: 100px;
   position: relative;
   width: var(--r);
@@ -341,7 +361,7 @@ Files inside this folder can contain specific element styles and layout.
   cursor: pointer;
 }
 
-.landpage-layout .main .see-more_sec .see-more_container::after {
+.main_container .landpage-layout .main .see-more_sec .see-more_container::after {
   content: '';
   position: absolute;
   width: var(--r);
@@ -353,7 +373,7 @@ Files inside this folder can contain specific element styles and layout.
   transition: 0.3s;
 }
 
-.landpage-layout .main .see-more_sec .see-more_container svg {
+.main_container .landpage-layout .main .see-more_sec .see-more_container svg {
   position: absolute;
   fill: gray;
   -webkit-transform: rotate(130deg);
@@ -363,23 +383,23 @@ Files inside this folder can contain specific element styles and layout.
   transition: 0.4s;
 }
 
-.landpage-layout .main .see-more_sec .see-more_container:hover {
+.main_container .landpage-layout .main .see-more_sec .see-more_container:hover {
   background-color: transparent;
   color: var(--main-gray);
 }
 
-.landpage-layout .main .see-more_sec .see-more_container:hover::after {
+.main_container .landpage-layout .main .see-more_sec .see-more_container:hover::after {
   width: 0px;
   height: 0px;
 }
 
-.landpage-layout .main .see-more_sec .see-more_container:hover svg {
+.main_container .landpage-layout .main .see-more_sec .see-more_container:hover svg {
   -webkit-transform: translateY(20px) rotate(130deg);
           transform: translateY(20px) rotate(130deg);
 }
 
 @media (min-width: 970px) {
-  .landpage-layout .main {
+  .main_container .landpage-layout .main {
     -ms-grid-columns: 1fr 8fr;
         grid-template-columns: 1fr 8fr;
   }
@@ -494,6 +514,7 @@ footer.dark {
 }
 
 .nav .nav_search_continer .nav_search_btn {
+  cursor: pointer;
   background-color: var(--main-white);
   display: -webkit-box;
   display: -ms-flexbox;
