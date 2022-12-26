@@ -2,8 +2,8 @@
 
 // https://www.superhi.com/video/smooth-movements-with-javascript
 
-const ball = document.querySelector("#cursor");
-
+const cursor = document.querySelector("#cursor");
+const lang_sec = document.querySelector('.lang_sec');
 let mouseX = 0;
 let mouseY = 0;
 
@@ -17,18 +17,20 @@ function animate() {
 
     let distX = mouseX - ballX;
     let distY = mouseY - ballY;
-    distX = distX - ball.clientWidth / 2;
-    distY = distY - ball.clientHeight / 2;
+    distX = distX - cursor.clientWidth / 2;
+    distY = distY - cursor.clientHeight / 2;
 
     ballX = ballX + (distX * speed);
     ballY = ballY + (distY * speed);
 
 
-    // ballX = ballX - ballW;
-    // ballY = ballY - 10;
-    ball.style.left = ballX + "px";
-    ball.style.top = ballY + "px";
+    cursor.style.left = ballX + "px";
+    cursor.style.top = ballY + "px";
 
+    // console.log(lang_sec.getBoundingClientRect().top, ballY)
+    if (lang_sec.getBoundingClientRect().top == ballY) {
+        console.log(10)
+    }
     requestAnimationFrame(animate);
 }
 animate();
@@ -51,8 +53,11 @@ const circleLetters = () => {
 }
 
 // this is for the language section hoveing 
-const lang_sec = document.querySelector('.lang_sec');
+
 lang_sec.addEventListener('mouseover', (e) => {
+    cursor.style.width = '0px';
+    cursor.style.height = '0px';
+    cursor.style.border = '0px';
     lang_sec.style.setProperty('--a', `400px`)
     e.target.addEventListener('mousemove', (e) => {
         const { clientX, clientY } = e
@@ -61,11 +66,13 @@ lang_sec.addEventListener('mouseover', (e) => {
 
         lang_sec.style.setProperty('--x', `${x}%`)
         lang_sec.style.setProperty('--y', `${y}%`)
-        console.log(lang_sec)
     })
 });
 lang_sec.addEventListener('mouseleave', (e) => {
     lang_sec.style.setProperty('--a', `0px`)
+    cursor.style.width = '80px';
+    cursor.style.height = '80px';
+    cursor.style.border = '1px solid var(--main-white)';
 });
 
 circleLetters();

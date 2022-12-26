@@ -1,3 +1,10 @@
+.test{
+    position: absolute;
+    top:456px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
 // curser
 .main_container{
     position: relative;
@@ -125,6 +132,7 @@
         }
 
         .lang_sec{
+            position: relative;
             cursor: none;
             --a:0px;
             --mask: radial-gradient(var(--a)  circle at var(--x, 50%) var(--y, 50%), rgb(179, 172, 172) 25%, transparent 0);
